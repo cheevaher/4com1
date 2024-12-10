@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductType));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPtTypeID = new System.Windows.Forms.TextBox();
             this.txtPtTypeName = new System.Windows.Forms.TextBox();
-            this.dgvShow = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.txtPtTypeID = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvShow = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.SuspendLayout();
@@ -72,31 +72,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ຮັບຂໍ້ມູນສິນຄ້າ";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 34);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "ຊື່ປະເພດສິນຄ້າ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 34);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ລະຫັດປະເພດ:";
-            // 
-            // txtPtTypeID
-            // 
-            this.txtPtTypeID.Location = new System.Drawing.Point(188, 44);
-            this.txtPtTypeID.Name = "txtPtTypeID";
-            this.txtPtTypeID.Size = new System.Drawing.Size(505, 41);
-            this.txtPtTypeID.TabIndex = 2;
-            // 
             // txtPtTypeName
             // 
             this.txtPtTypeName.Location = new System.Drawing.Point(188, 100);
@@ -104,16 +79,6 @@
             this.txtPtTypeName.Name = "txtPtTypeName";
             this.txtPtTypeName.Size = new System.Drawing.Size(505, 393);
             this.txtPtTypeName.TabIndex = 3;
-            // 
-            // dgvShow
-            // 
-            this.dgvShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShow.Location = new System.Drawing.Point(717, 92);
-            this.dgvShow.Name = "dgvShow";
-            this.dgvShow.RowHeadersWidth = 51;
-            this.dgvShow.RowTemplate.Height = 24;
-            this.dgvShow.Size = new System.Drawing.Size(437, 610);
-            this.dgvShow.TabIndex = 19;
             // 
             // btnDelete
             // 
@@ -128,6 +93,14 @@
             this.btnDelete.Text = "ລົບຂໍ້ມູນ";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtPtTypeID
+            // 
+            this.txtPtTypeID.Location = new System.Drawing.Point(188, 44);
+            this.txtPtTypeID.Name = "txtPtTypeID";
+            this.txtPtTypeID.Size = new System.Drawing.Size(505, 41);
+            this.txtPtTypeID.TabIndex = 2;
             // 
             // btnEdit
             // 
@@ -142,6 +115,16 @@
             this.btnEdit.Text = "ແກ້ໄຂຂໍ້ມູນ";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 34);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "ຊື່ປະເພດສິນຄ້າ:";
             // 
             // btnAdd
             // 
@@ -156,6 +139,27 @@
             this.btnAdd.Text = "ເພີ່ມຂໍ້ມູນ";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 34);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ລະຫັດປະເພດ:";
+            // 
+            // dgvShow
+            // 
+            this.dgvShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShow.Location = new System.Drawing.Point(717, 92);
+            this.dgvShow.Name = "dgvShow";
+            this.dgvShow.RowHeadersWidth = 51;
+            this.dgvShow.RowTemplate.Height = 24;
+            this.dgvShow.Size = new System.Drawing.Size(437, 610);
+            this.dgvShow.TabIndex = 19;
+            this.dgvShow.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvShow_CellMouseClick);
             // 
             // frmProductType
             // 
